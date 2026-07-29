@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<!--
+  Adversary Wars simulation project, set in the fictional city of Adversary City.
+  City Power Station is a fictional facility in the fictional city of Adversary City.
+  This site was built for a simulated training/CTF scenario and is not intended
+  to represent, impersonate, or harm any real electric utility, organization, or place.
+  No real personnel data, phone numbers, or addresses are used anywhere in this project.
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>City Power Station · Adversary City</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="disclaimer" content="City Power Station and Adversary City are fictional, built for the Adversary Wars simulated training scenario. Not affiliated with, and does not depict, any real electric utility, generating station, or place." />
+  <meta name="description" content="City Power Station, Adversary City's municipal electric utility: live grid status, outage reporting, rates, and energy efficiency programs." />
+  <meta property="og:title" content="City Power Station · Adversary City" />
+  <meta property="og:description" content="Adversary City's municipal electric utility: one generating station, six substations, 48,000 meters." />
+  <meta property="og:type" content="website" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none';" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='4' fill='%23c1662f'/%3E%3Cpath d='M13 2 4 14h6l-1 8 9-12h-6l1-8z' fill='%23f4f5f2'/%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html" aria-current="page">
+        <svg class="brand-mark" viewBox="0 0 24 24" aria-hidden="true">
+          <rect width="24" height="24" rx="4" fill="#c1662f" />
+          <path d="M13 2 4 14h6l-1 8 9-12h-6l1-8z" fill="#f4f5f2" />
+        </svg>
+        <span class="brand-text">
+          <span class="brand-name">City Power Station</span>
+          <span class="brand-sub">Adversary City Municipal Utility · Est. 1938</span>
+        </span>
+      </a>
+
+      <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18" /></svg>
+        <span class="visually-hidden">Menu</span>
+      </button>
+
+      <nav class="primary-nav" id="primary-nav" aria-label="Primary">
+        <ul>
+          <li><a href="about/index.html">About</a></li>
+          <li><a href="grid-status/index.html">Grid Status</a></li>
+          <li><a href="outages/index.html">Outages</a></li>
+          <li><a href="rates/index.html">Rates</a></li>
+          <li><a href="programs/index.html">Programs</a></li>
+          <li><a href="notices/index.html">Notices</a></li>
+        </ul>
+        <a class="btn btn-primary" href="outages/index.html#report">Report an Outage</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="wrap">
+        <span class="hero-status-pill"><span class="hero-status-dot"></span>Grid Status: Normal, No Active Outages Citywide</span>
+        <h1>One station generates it. 340 miles of line deliver it. 48,000 meters use it.</h1>
+        <p class="lede">City Power Station is Adversary City's municipal electric utility, owned by the city and overseen by the Board of Public Utilities. We generate at Riverside Station, move power through six substations, and bill by the kilowatt-hour.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="outages/index.html#report">Report an Outage</a>
+          <a class="btn btn-secondary btn-on-dark" href="#grid-status">See Live Grid Status</a>
+        </div>
+        <div class="hero-facts">
+          <div>
+            <span class="hero-fact-value">1938</span>
+            <span class="hero-fact-label">Established</span>
+          </div>
+          <div>
+            <span class="hero-fact-value">210 MW</span>
+            <span class="hero-fact-label">Generating Capacity</span>
+          </div>
+          <div>
+            <span class="hero-fact-value">48,000</span>
+            <span class="hero-fact-label">Meters Served</span>
+          </div>
+        </div>
+      </div>
+      <svg class="hero-horizon" viewBox="0 0 1200 220" preserveAspectRatio="none" aria-hidden="true">
+        <defs>
+          <radialGradient id="duskGlow" cx="50%" cy="100%" r="75%">
+            <stop offset="0%" stop-color="#c1662f" stop-opacity="0.35" />
+            <stop offset="100%" stop-color="#c1662f" stop-opacity="0" />
+          </radialGradient>
+        </defs>
+        <ellipse cx="600" cy="210" rx="650" ry="90" fill="url(#duskGlow)" />
+        <line x1="0" y1="210" x2="1200" y2="210" stroke="#2a3038" stroke-width="1" />
+
+        <path class="line-glow" d="M188,92 Q300,132 412,92" fill="none" stroke-width="2" />
+        <path class="line-glow delay-1" d="M488,92 Q600,132 712,92" fill="none" stroke-width="2" />
+        <path class="line-glow delay-2" d="M788,92 Q900,132 1012,92" fill="none" stroke-width="2" />
+
+        <g transform="translate(150,210)">
+          <path d="M-45,0 L-7,-150" fill="none" stroke="#3a424c" stroke-width="3" />
+          <path d="M45,0 L7,-150" fill="none" stroke="#3a424c" stroke-width="3" />
+          <path d="M-7,-150 L7,-150" fill="none" stroke="#3a424c" stroke-width="3" />
+          <path d="M-38,-118 L38,-118" fill="none" stroke="#3a424c" stroke-width="3" />
+          <path d="M-30,-50 L30,-50" fill="none" stroke="#3a424c" stroke-width="3" />
+        </g>
+        <g transform="translate(450,210)">
+          <path d="M-45,0 L-7,-150" fill="none" stroke="#3a424c" stroke-width="3" />
+          <path d="M45,0 L7,-150" fill="none" stroke="#3a424c" stroke-width="3" />
+          <path d="M-7,-150 L7,-150" fill="none" stroke="#3a424c" stroke-width="3" />
+          <path d="M-38,-118 L38,-118" fill="none" stroke="#3a424c" stroke-width="3" />
+          <path d="M-30,-50 L30,-50" fill="none" stroke="#3a424c" stroke-width="3" />
+        </g>
+        <g transform="translate(750,210)">
+          <path d="M-45,0 L-7,-150" fill="none" stroke="#3a424c" stroke-width="3" />
+          <path d="M45,0 L7,-150" fill="none" stroke="#3a424c" stroke-width="3" />
+          <path d="M-7,-150 L7,-150" fill="none" stroke="#3a424c" stroke-width="3" />
+          <path d="M-38,-118 L38,-118" fill="none" stroke="#3a424c" stroke-width="3" />
+          <path d="M-30,-50 L30,-50" fill="none" stroke="#3a424c" stroke-width="3" />
+        </g>
+        <g transform="translate(1050,210)">
+          <path d="M-45,0 L-7,-150" fill="none" stroke="#3a424c" stroke-width="3" />
+          <path d="M45,0 L7,-150" fill="none" stroke="#3a424c" stroke-width="3" />
+          <path d="M-7,-150 L7,-150" fill="none" stroke="#3a424c" stroke-width="3" />
+          <path d="M-38,-118 L38,-118" fill="none" stroke="#3a424c" stroke-width="3" />
+          <path d="M-30,-50 L30,-50" fill="none" stroke="#3a424c" stroke-width="3" />
+        </g>
+      </svg>
+    </section>
+
+    <section class="section" id="grid-status" aria-labelledby="grid-status-heading">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <h2 id="grid-status-heading">The grid, read the way an operator reads it.</h2>
+          <p>These three dials mirror what a system operator watches on the control room floor: how much of the station's capacity is in use, whether the grid is holding its frequency, and how much reserve is left if a unit trips offline.</p>
+        </div>
+
+        <div class="instrument-panel reveal">
+          <div class="instrument-head">
+            <span class="instrument-title">System Readout</span>
+            <span class="instrument-demo">Demonstration data, refreshed each business day</span>
+          </div>
+
+          <div class="gauge-row">
+            <div class="gauge-dial" role="img" aria-label="Grid frequency: 60.01 hertz, within the normal band of 59.5 to 60.5">
+              <svg viewBox="0 0 200 114" aria-hidden="true">
+                <path class="gauge-track" d="M22,100 A78,78 0 0 1 178,100" />
+                <line x1="22" y1="100" x2="34" y2="100" stroke="#c4ccd2" stroke-width="3" />
+                <line x1="100" y1="22" x2="100" y2="34" stroke="#c4ccd2" stroke-width="3" />
+                <line x1="166" y1="100" x2="178" y2="100" stroke="#c4ccd2" stroke-width="3" />
+                <line class="gauge-needle needle-freq" x1="100" y1="100" x2="100" y2="30" />
+                <circle class="gauge-hub" cx="100" cy="100" r="6" />
+              </svg>
+              <span class="gauge-value">60.01 Hz</span>
+              <span class="gauge-label">Grid Frequency</span>
+              <span class="gauge-note">target: 60.00 Hz ± 0.5</span>
+            </div>
+
+            <div class="gauge-dial is-primary" role="img" aria-label="System load: 68 percent of generating capacity">
+              <svg viewBox="0 0 200 114" aria-hidden="true">
+                <path class="gauge-track" d="M22,100 A78,78 0 0 1 178,100" />
+                <line x1="22" y1="100" x2="34" y2="100" stroke="#c4ccd2" stroke-width="3" />
+                <line x1="100" y1="22" x2="100" y2="34" stroke="#c4ccd2" stroke-width="3" />
+                <line x1="166" y1="100" x2="178" y2="100" stroke="#c4ccd2" stroke-width="3" />
+                <line class="gauge-needle needle-load" x1="100" y1="100" x2="100" y2="26" />
+                <circle class="gauge-hub" cx="100" cy="100" r="8" />
+              </svg>
+              <span class="gauge-value">68%</span>
+              <span class="gauge-label">System Load</span>
+              <span class="gauge-note">of 210 MW capacity</span>
+            </div>
+
+            <div class="gauge-dial" role="img" aria-label="Reserve capacity: 22 percent, above the 15 percent board minimum">
+              <svg viewBox="0 0 200 114" aria-hidden="true">
+                <path class="gauge-track" d="M22,100 A78,78 0 0 1 178,100" />
+                <line x1="22" y1="100" x2="34" y2="100" stroke="#c4ccd2" stroke-width="3" />
+                <line x1="100" y1="22" x2="100" y2="34" stroke="#c4ccd2" stroke-width="3" />
+                <line x1="166" y1="100" x2="178" y2="100" stroke="#c4ccd2" stroke-width="3" />
+                <line class="gauge-needle needle-reserve" x1="100" y1="100" x2="100" y2="30" />
+                <circle class="gauge-hub" cx="100" cy="100" r="6" />
+              </svg>
+              <span class="gauge-value">22%</span>
+              <span class="gauge-label">Reserve Capacity</span>
+              <span class="gauge-note">board minimum: 15%</span>
+            </div>
+          </div>
+          <p class="instrument-foot">Figures are illustrative and shown for demonstration purposes only. Actual grid conditions are monitored around the clock from Riverside Station.</p>
+        </div>
+        <a class="section-link" href="grid-status/index.html">See generation mix and how the readout is built</a>
+      </div>
+    </section>
+
+    <section class="section section-tint" id="outages" aria-labelledby="outages-heading">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <h2 id="outages-heading">Current outages.</h2>
+          <p>Posted as crews confirm them. If your address isn't listed here, report it so a crew gets dispatched.</p>
+        </div>
+
+        <ul class="outage-list reveal">
+          <li class="outage-item">
+            <div>
+              <span class="outage-area">Foundry Row</span>
+              <p class="outage-meta">Cause: equipment failure at Foundry Substation · Est. restoration 4:00 PM</p>
+            </div>
+            <span class="outage-count">118 customers</span>
+            <span class="outage-status is-dispatched">Crew Dispatched</span>
+          </li>
+          <li class="outage-item">
+            <div>
+              <span class="outage-area">Riverside District</span>
+              <p class="outage-meta">Cause: vehicle collision with pole · Est. restoration 6:30 PM</p>
+            </div>
+            <span class="outage-count">42 customers</span>
+            <span class="outage-status is-progress">In Progress</span>
+          </li>
+          <li class="outage-item">
+            <div>
+              <span class="outage-area">Harbor Line Corridor</span>
+              <p class="outage-meta">Cause: tree contact · Restored 11:20 AM</p>
+            </div>
+            <span class="outage-count">6 customers</span>
+            <span class="outage-status is-restored">Restored</span>
+          </li>
+        </ul>
+
+        <div class="safety-callout reveal">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 3 2 20h20L12 3z" stroke-linejoin="round" /><path d="M12 10v4" stroke-linecap="round" /><circle cx="12" cy="17" r="0.6" fill="currentColor" /></svg>
+          <div>
+            <h3>Treat every downed line as energized</h3>
+            <p>Stay at least 35 feet back, keep others away, and call it in. Do not touch a line or anything it's resting on, even if it looks dead.</p>
+          </div>
+        </div>
+        <a class="section-link" href="outages/index.html">Report an outage or see full safety guidance</a>
+      </div>
+    </section>
+
+    <section class="section" id="rates" aria-labelledby="rates-heading">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <h2 id="rates-heading">Residential rates, by the kilowatt-hour.</h2>
+          <p>Usage above the first block costs more per kilowatt-hour, which rewards conservation. Every account also carries a fixed monthly customer charge that covers metering and line maintenance.</p>
+        </div>
+
+        <div class="table-scroll reveal">
+          <table class="rate-table">
+            <thead>
+              <tr>
+                <th>Usage Tier</th>
+                <th class="num">Price per kWh</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Tier 1: first 500 kWh</td><td class="num">$0.1024</td></tr>
+              <tr><td>Tier 2: 501 to 1,000 kWh</td><td class="num">$0.1247</td></tr>
+              <tr><td>Tier 3: 1,001 kWh and up</td><td class="num">$0.1489</td></tr>
+              <tr><td>Fixed customer charge</td><td class="num">$9.50 / month</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="table-note">Rates set by the Board of Public Utilities, current as of the July 2026 rate schedule.</p>
+        <a class="section-link" href="rates/index.html">See commercial rates and the Time-of-Advantage plan</a>
+      </div>
+    </section>
+
+    <section class="section section-tint" id="programs" aria-labelledby="programs-heading">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <h2 id="programs-heading">Programs that lower the bill.</h2>
+          <p>Rebates for efficiency upgrades, a subscription to the city's solar array, and payment plans for customers who need one.</p>
+        </div>
+
+        <div class="program-grid reveal">
+          <div class="program-card">
+            <span class="program-card-kind">Rebate</span>
+            <h3>Home Efficiency Rebate</h3>
+            <p>Insulation, duct sealing, and heat pump upgrades qualify. A free home energy audit comes first.</p>
+            <span class="program-card-value">Up to $400</span>
+            <span class="program-card-value-label">per household, per year</span>
+          </div>
+          <div class="program-card">
+            <span class="program-card-kind">Renewable</span>
+            <h3>Riverside Community Solar</h3>
+            <p>Subscribe to a block of the Riverside Solar Array without installing panels of your own. Credited straight to your bill.</p>
+            <span class="program-card-value">$0.09 / kWh block</span>
+            <span class="program-card-value-label">locked for 5 years</span>
+          </div>
+          <div class="program-card">
+            <span class="program-card-kind">Billing</span>
+            <h3>Equal Payment Plan</h3>
+            <p>Your bill is averaged across the year into one flat monthly amount, adjusted every 12 months.</p>
+            <span class="program-card-value">Same amount</span>
+            <span class="program-card-value-label">every month, no seasonal spikes</span>
+          </div>
+        </div>
+        <a class="section-link" href="programs/index.html">See all seven programs, including bill assistance</a>
+      </div>
+    </section>
+
+    <section class="section" id="about" aria-labelledby="about-heading">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <h2 id="about-heading">Publicly owned since 1938.</h2>
+          <p>City Power Station has generated and delivered Adversary City's electricity for 88 years, run as a city department rather than a shareholder-owned company.</p>
+        </div>
+
+        <ul class="fact-strip reveal">
+          <li class="fact-strip-item">
+            <span class="fact-strip-value">340 mi</span>
+            <span class="fact-strip-label">Distribution Line</span>
+          </li>
+          <li class="fact-strip-item">
+            <span class="fact-strip-value">6</span>
+            <span class="fact-strip-label">Substations</span>
+          </li>
+          <li class="fact-strip-item">
+            <span class="fact-strip-value">62 min</span>
+            <span class="fact-strip-label">Avg. Outage Minutes / Customer / Year</span>
+          </li>
+          <li class="fact-strip-item">
+            <span class="fact-strip-value">211</span>
+            <span class="fact-strip-label">Employees</span>
+          </li>
+        </ul>
+        <a class="section-link" href="about/index.html">Read the full history and meet the Board of Public Utilities</a>
+      </div>
+    </section>
+
+    <section class="section section-tint" id="notices" aria-labelledby="notices-heading">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <h2 id="notices-heading">Notices and planned work.</h2>
+          <p>Planned maintenance outages, rate filings, and storm updates, posted as they're confirmed.</p>
+        </div>
+
+        <ul class="notice-list reveal">
+          <li class="notice-item is-planned">
+            <div class="notice-meta">
+              <span class="notice-tag">Planned</span>
+              <span class="notice-date">Jul 26, 2026</span>
+            </div>
+            <div class="notice-body">
+              <h3>Cedar Substation maintenance, August 3</h3>
+              <p>Power will be interrupted for about 600 customers near Cedar Substation from 1 AM to 5 AM for transformer maintenance.</p>
+            </div>
+          </li>
+          <li class="notice-item is-info">
+            <div class="notice-meta">
+              <span class="notice-tag">Info</span>
+              <span class="notice-date">Jul 18, 2026</span>
+            </div>
+            <div class="notice-body">
+              <h3>Riverside Community Solar enrollment open</h3>
+              <p>The second block of the solar array is now available to residential subscribers.</p>
+            </div>
+          </li>
+          <li class="notice-item is-alert">
+            <div class="notice-meta">
+              <span class="notice-tag">Alert</span>
+              <span class="notice-date">Jul 9, 2026</span>
+            </div>
+            <div class="notice-body">
+              <h3>Rate case filing open for public comment</h3>
+              <p>The Board of Public Utilities is reviewing a proposed Tier 3 rate adjustment. Written comment closes August 15.</p>
+            </div>
+          </li>
+        </ul>
+        <a class="section-link" href="notices/index.html">View all notices</a>
+      </div>
+    </section>
+
+    <section class="section" id="contact" aria-labelledby="contact-heading">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <h2 id="contact-heading">Reach City Power Station.</h2>
+        </div>
+
+        <div class="two-col">
+          <div class="reveal panel-card">
+            <h3>Offices &amp; Hours</h3>
+            <ul class="contact-list">
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 21s-6-5.2-6-10a6 6 0 1 1 12 0c0 4.8-6 10-6 10z" /><circle cx="12" cy="11" r="2.2" /></svg>
+                <address>
+                  Riverside Station<br />
+                  4 Substation Road<br />
+                  Adversary City, AC 00000
+                </address>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 5c0 8.3 6.7 15 15 15l1-4-5-2-2 2c-2-1-4-3-5-5l2-2-2-5-4 1z" /></svg>
+                <p class="contact-numbers">
+                  Report an Outage: 555-0141<br />
+                  Billing &amp; Customer Service: 555-0142<br />
+                  Board of Public Utilities Office: 555-0143
+                </p>
+              </li>
+            </ul>
+
+            <table class="hours-table">
+              <tbody>
+                <tr><td>Customer Service, Mon to Fri</td><td class="num">8 AM to 5 PM</td></tr>
+                <tr><td>Outage Reporting</td><td class="num">24 hours</td></tr>
+                <tr><td>Board of Public Utilities meetings</td><td class="num">1st Tuesday, 6 PM</td></tr>
+              </tbody>
+            </table>
+            <div class="callout">Outages are always reported fastest online or by phone, day or night. The office line is for billing and account questions.</div>
+          </div>
+
+          <div class="reveal panel-card">
+            <h3>Send a Message</h3>
+            <form id="contact-form" novalidate>
+              <p class="form-note">Demonstration form. Nothing is sent or stored when you submit.</p>
+
+              <div class="field">
+                <label for="contact-name">Full name</label>
+                <input type="text" id="contact-name" name="contact-name" autocomplete="name" required />
+              </div>
+
+              <div class="field">
+                <label for="contact-reply">Email or phone</label>
+                <input type="text" id="contact-reply" name="contact-reply" autocomplete="email" placeholder="you@example.com or 555-0100" required />
+              </div>
+
+              <div class="field">
+                <label for="contact-reason">Reason for contact</label>
+                <select id="contact-reason" name="reason">
+                  <option>Billing Question</option>
+                  <option>Start or Stop Service</option>
+                  <option>Energy Program Question</option>
+                  <option>General Inquiry</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label for="contact-message">Message</label>
+                <textarea id="contact-message" name="contact-message" rows="4" required></textarea>
+              </div>
+
+              <button class="btn btn-primary" type="submit">Send Message</button>
+              <p class="confirm-panel" id="confirm-panel" role="status"></p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-brand-top">
+            <svg class="brand-mark" viewBox="0 0 24 24" aria-hidden="true">
+              <rect width="24" height="24" rx="4" fill="#c1662f" />
+              <path d="M13 2 4 14h6l-1 8 9-12h-6l1-8z" fill="#f4f5f2" />
+            </svg>
+            <span class="brand-name brand-name-invert">City Power Station</span>
+          </div>
+          <p>Adversary City's municipal electric utility: one generating station, six substations, 48,000 meters served.</p>
+          <p class="disclaimer">City Power Station and Adversary City are fictional. This site is part of the Adversary Wars simulated training scenario and is not affiliated with, and does not depict, any real electric utility, generating station, or place.</p>
+        </div>
+
+        <div>
+          <h3>Service</h3>
+          <ul>
+            <li><a href="outages/index.html">Outages &amp; Safety</a></li>
+            <li><a href="rates/index.html">Rates</a></li>
+            <li><a href="programs/index.html">Programs</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Utility Info</h3>
+          <ul>
+            <li><a href="about/index.html">About &amp; Leadership</a></li>
+            <li><a href="grid-status/index.html">Grid Status</a></li>
+            <li><a href="notices/index.html">Notices</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Contact</h3>
+          <ul>
+            <li><a href="index.html#contact">Offices &amp; Hours</a></li>
+            <li><a href="outages/index.html#report">Report an Outage</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span id="year"></span> City Power Station, Adversary City (fictional).</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>

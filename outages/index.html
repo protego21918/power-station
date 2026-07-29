@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<!--
+  Adversary Wars simulation project, set in the fictional city of Adversary City.
+  City Power Station is a fictional facility in the fictional city of Adversary City.
+  This site was built for a simulated training/CTF scenario and is not intended
+  to represent, impersonate, or harm any real electric utility, organization, or place.
+  No real personnel data, phone numbers, or addresses are used anywhere in this project.
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Outages &amp; Safety · City Power Station</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="disclaimer" content="City Power Station and Adversary City are fictional, built for the Adversary Wars simulated training scenario. Not affiliated with, and does not depict, any real electric utility, generating station, or place." />
+  <meta name="description" content="Report an outage, check current outages across Adversary City, and read downed-line and generator safety guidance." />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none';" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='4' fill='%23c1662f'/%3E%3Cpath d='M13 2 4 14h6l-1 8 9-12h-6l1-8z' fill='%23f4f5f2'/%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="../index.html">
+        <svg class="brand-mark" viewBox="0 0 24 24" aria-hidden="true">
+          <rect width="24" height="24" rx="4" fill="#c1662f" />
+          <path d="M13 2 4 14h6l-1 8 9-12h-6l1-8z" fill="#f4f5f2" />
+        </svg>
+        <span class="brand-text">
+          <span class="brand-name">City Power Station</span>
+          <span class="brand-sub">Adversary City Municipal Utility · Est. 1938</span>
+        </span>
+      </a>
+
+      <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18" /></svg>
+        <span class="visually-hidden">Menu</span>
+      </button>
+
+      <nav class="primary-nav" id="primary-nav" aria-label="Primary">
+        <ul>
+          <li><a href="../about/index.html">About</a></li>
+          <li><a href="../grid-status/index.html">Grid Status</a></li>
+          <li><a href="index.html" aria-current="page">Outages</a></li>
+          <li><a href="../rates/index.html">Rates</a></li>
+          <li><a href="../programs/index.html">Programs</a></li>
+          <li><a href="../notices/index.html">Notices</a></li>
+        </ul>
+        <a class="btn btn-primary" href="#report">Report an Outage</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-header">
+      <div class="wrap">
+        <h1>Outages, safety, and how to report one.</h1>
+        <p class="lede">If your power is out and your address isn't listed below, report it. Crews confirm outages from customer reports plus automated sensors at each substation.</p>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="current-heading">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <h2 id="current-heading">Current outages.</h2>
+          <p>Posted as crews confirm them, updated through the day.</p>
+        </div>
+
+        <ul class="outage-list reveal">
+          <li class="outage-item">
+            <div>
+              <span class="outage-area">Foundry Row</span>
+              <p class="outage-meta">Cause: equipment failure at Foundry Substation · Est. restoration 4:00 PM</p>
+            </div>
+            <span class="outage-count">118 customers</span>
+            <span class="outage-status is-dispatched">Crew Dispatched</span>
+          </li>
+          <li class="outage-item">
+            <div>
+              <span class="outage-area">Riverside District</span>
+              <p class="outage-meta">Cause: vehicle collision with pole · Est. restoration 6:30 PM</p>
+            </div>
+            <span class="outage-count">42 customers</span>
+            <span class="outage-status is-progress">In Progress</span>
+          </li>
+          <li class="outage-item">
+            <div>
+              <span class="outage-area">Cedar Heights</span>
+              <p class="outage-meta">Cause: transformer overload during peak demand · Est. restoration 3:15 PM</p>
+            </div>
+            <span class="outage-count">27 customers</span>
+            <span class="outage-status is-dispatched">Crew Dispatched</span>
+          </li>
+          <li class="outage-item">
+            <div>
+              <span class="outage-area">Harbor Line Corridor</span>
+              <p class="outage-meta">Cause: tree contact · Restored 11:20 AM</p>
+            </div>
+            <span class="outage-count">6 customers</span>
+            <span class="outage-status is-restored">Restored</span>
+          </li>
+        </ul>
+        <p class="table-note">Demonstration data. In a real outage, this list draws from substation sensors and confirmed customer reports.</p>
+      </div>
+    </section>
+
+    <section class="section section-tint" id="report" aria-labelledby="report-heading">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <h2 id="report-heading">Report an outage.</h2>
+          <p>The fastest way to get a crew dispatched. Phone reports go to the same queue.</p>
+        </div>
+
+        <div class="two-col">
+          <div class="reveal panel-card">
+            <h3>Before You Report</h3>
+            <ul class="contact-list">
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 5c0 8.3 6.7 15 15 15l1-4-5-2-2 2c-2-1-4-3-5-5l2-2-2-5-4 1z" /></svg>
+                <p class="contact-numbers">Report an Outage: 555-0141, 24 hours</p>
+              </li>
+            </ul>
+            <div class="callout">Check your main breaker first. If only part of your home is dark, the outage may be inside your panel, not on the grid.</div>
+          </div>
+
+          <div class="reveal panel-card">
+            <h3>Outage Report Form</h3>
+            <form id="outage-report-form" novalidate>
+              <p class="form-note">Demonstration form. Nothing is sent or stored when you submit.</p>
+
+              <div class="field">
+                <label for="outage-address">Service address</label>
+                <input type="text" id="outage-address" name="outage-address" autocomplete="street-address" required />
+              </div>
+
+              <div class="field">
+                <label for="outage-phone">Callback phone</label>
+                <input type="text" id="outage-phone" name="outage-phone" autocomplete="tel" placeholder="555-0100" required />
+              </div>
+
+              <div class="field">
+                <label for="outage-notes">What did you notice?</label>
+                <textarea id="outage-notes" name="outage-notes" rows="4" placeholder="Downed line, sparking, everything dark, etc."></textarea>
+              </div>
+
+              <button class="btn btn-primary" type="submit">Report Outage</button>
+              <p class="confirm-panel" id="outage-report-confirm" role="status"></p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="safety-heading">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <h2 id="safety-heading">Downed line and generator safety.</h2>
+        </div>
+
+        <div class="safety-callout reveal">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 3 2 20h20L12 3z" stroke-linejoin="round" /><path d="M12 10v4" stroke-linecap="round" /><circle cx="12" cy="17" r="0.6" fill="currentColor" /></svg>
+          <div>
+            <h3>Treat every downed line as energized</h3>
+            <p>Stay at least 35 feet back, keep others away, and call it in. Do not touch a line or anything it's resting on, a fence, a car, standing water, even if it looks dead.</p>
+          </div>
+        </div>
+
+        <ul class="program-list">
+          <li class="program-item">
+            <span class="program-schedule">Digging</span>
+            <div>
+              <h3>Call 811 before you dig</h3>
+              <p>The state one-call center marks buried lines within your property free of charge, usually within a few business days.</p>
+            </div>
+          </li>
+          <li class="program-item">
+            <span class="program-schedule">Generators</span>
+            <div>
+              <h3>Never connect a generator without a transfer switch</h3>
+              <p>Plugging a generator directly into your home's wiring can back-feed power onto the grid and injure a line crew working on what they believe is a dead line.</p>
+            </div>
+          </li>
+          <li class="program-item">
+            <span class="program-schedule">Wildlife</span>
+            <div>
+              <h3>Report animal contact with equipment</h3>
+              <p>Squirrels and birds on transformers are a leading cause of small, localized outages. Report sightings near substations to the safety line.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section section-tint" aria-labelledby="priority-heading">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <h2 id="priority-heading">How storm restoration is prioritized.</h2>
+          <p>Crews work in this order, whether it's ten outages or ten thousand.</p>
+        </div>
+
+        <ol class="timeline reveal">
+          <li class="timeline-item">
+            <span class="timeline-year">First</span>
+            <h3>Critical infrastructure</h3>
+            <p>Hospitals, water treatment, and 911 dispatch are restored first, regardless of customer count.</p>
+          </li>
+          <li class="timeline-item">
+            <span class="timeline-year">Second</span>
+            <h3>Substations and trunk lines</h3>
+            <p>Repairing the lines that feed the most customers restores power to entire neighborhoods at once.</p>
+          </li>
+          <li class="timeline-item">
+            <span class="timeline-year">Third</span>
+            <h3>Neighborhood branch lines</h3>
+            <p>Smaller lines serving blocks and streets are repaired next, in order of how many customers each one affects.</p>
+          </li>
+          <li class="timeline-item">
+            <span class="timeline-year">Fourth</span>
+            <h3>Individual service lines</h3>
+            <p>Repairs to a single home or business, often a damaged weatherhead or service drop, are handled last.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-brand-top">
+            <svg class="brand-mark" viewBox="0 0 24 24" aria-hidden="true">
+              <rect width="24" height="24" rx="4" fill="#c1662f" />
+              <path d="M13 2 4 14h6l-1 8 9-12h-6l1-8z" fill="#f4f5f2" />
+            </svg>
+            <span class="brand-name brand-name-invert">City Power Station</span>
+          </div>
+          <p>Adversary City's municipal electric utility: one generating station, six substations, 48,000 meters served.</p>
+          <p class="disclaimer">City Power Station and Adversary City are fictional. This site is part of the Adversary Wars simulated training scenario and is not affiliated with, and does not depict, any real electric utility, generating station, or place.</p>
+        </div>
+
+        <div>
+          <h3>Service</h3>
+          <ul>
+            <li><a href="index.html">Outages &amp; Safety</a></li>
+            <li><a href="../rates/index.html">Rates</a></li>
+            <li><a href="../programs/index.html">Programs</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Utility Info</h3>
+          <ul>
+            <li><a href="../about/index.html">About &amp; Leadership</a></li>
+            <li><a href="../grid-status/index.html">Grid Status</a></li>
+            <li><a href="../notices/index.html">Notices</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Contact</h3>
+          <ul>
+            <li><a href="../index.html#contact">Offices &amp; Hours</a></li>
+            <li><a href="#report">Report an Outage</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span id="year"></span> City Power Station, Adversary City (fictional).</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js" defer></script>
+</body>
+</html>

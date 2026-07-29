@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<!--
+  Adversary Wars simulation project, set in the fictional city of Adversary City.
+  City Power Station is a fictional facility in the fictional city of Adversary City.
+  This site was built for a simulated training/CTF scenario and is not intended
+  to represent, impersonate, or harm any real electric utility, organization, or place.
+  No real personnel data, phone numbers, or addresses are used anywhere in this project.
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Grid Status · City Power Station</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="disclaimer" content="City Power Station and Adversary City are fictional, built for the Adversary Wars simulated training scenario. Not affiliated with, and does not depict, any real electric utility, generating station, or place." />
+  <meta name="description" content="How City Power Station reads system load, grid frequency, and reserve capacity, with today's demonstration readout." />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none';" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='4' fill='%23c1662f'/%3E%3Cpath d='M13 2 4 14h6l-1 8 9-12h-6l1-8z' fill='%23f4f5f2'/%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="../index.html">
+        <svg class="brand-mark" viewBox="0 0 24 24" aria-hidden="true">
+          <rect width="24" height="24" rx="4" fill="#c1662f" />
+          <path d="M13 2 4 14h6l-1 8 9-12h-6l1-8z" fill="#f4f5f2" />
+        </svg>
+        <span class="brand-text">
+          <span class="brand-name">City Power Station</span>
+          <span class="brand-sub">Adversary City Municipal Utility · Est. 1938</span>
+        </span>
+      </a>
+
+      <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18" /></svg>
+        <span class="visually-hidden">Menu</span>
+      </button>
+
+      <nav class="primary-nav" id="primary-nav" aria-label="Primary">
+        <ul>
+          <li><a href="../about/index.html">About</a></li>
+          <li><a href="index.html" aria-current="page">Grid Status</a></li>
+          <li><a href="../outages/index.html">Outages</a></li>
+          <li><a href="../rates/index.html">Rates</a></li>
+          <li><a href="../programs/index.html">Programs</a></li>
+          <li><a href="../notices/index.html">Notices</a></li>
+        </ul>
+        <a class="btn btn-primary" href="../outages/index.html#report">Report an Outage</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-header">
+      <div class="wrap">
+        <h1>Three dials, one control room.</h1>
+        <p class="lede">System operators at Riverside Station watch these three numbers around the clock. Together they answer one question: can the grid meet demand right now, and what happens if something trips offline.</p>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="readout-heading">
+      <div class="wrap">
+        <h2 class="visually-hidden" id="readout-heading">Live system readout</h2>
+
+        <figure class="photo-frame reveal">
+          <img src="../assets/images/control-room.jpg" width="612" height="407" alt="Control room panel with rows of switches, indicator lights, and monitor screens where operators track grid conditions." loading="lazy" />
+          <figcaption>Riverside Station's control room, where operators watch these same three numbers.</figcaption>
+        </figure>
+
+        <div class="instrument-panel reveal">
+          <div class="instrument-head">
+            <span class="instrument-title">System Readout</span>
+            <span class="instrument-demo">Demonstration data, refreshed each business day</span>
+          </div>
+
+          <div class="gauge-row">
+            <div class="gauge-dial" role="img" aria-label="Grid frequency: 60.01 hertz, within the normal band of 59.5 to 60.5">
+              <svg viewBox="0 0 200 114" aria-hidden="true">
+                <path class="gauge-track" d="M22,100 A78,78 0 0 1 178,100" />
+                <line x1="22" y1="100" x2="34" y2="100" stroke="#c4ccd2" stroke-width="3" />
+                <line x1="100" y1="22" x2="100" y2="34" stroke="#c4ccd2" stroke-width="3" />
+                <line x1="166" y1="100" x2="178" y2="100" stroke="#c4ccd2" stroke-width="3" />
+                <line class="gauge-needle needle-freq" x1="100" y1="100" x2="100" y2="30" />
+                <circle class="gauge-hub" cx="100" cy="100" r="6" />
+              </svg>
+              <span class="gauge-value">60.01 Hz</span>
+              <span class="gauge-label">Grid Frequency</span>
+              <span class="gauge-note">target: 60.00 Hz ± 0.5</span>
+            </div>
+
+            <div class="gauge-dial is-primary" role="img" aria-label="System load: 68 percent of generating capacity">
+              <svg viewBox="0 0 200 114" aria-hidden="true">
+                <path class="gauge-track" d="M22,100 A78,78 0 0 1 178,100" />
+                <line x1="22" y1="100" x2="34" y2="100" stroke="#c4ccd2" stroke-width="3" />
+                <line x1="100" y1="22" x2="100" y2="34" stroke="#c4ccd2" stroke-width="3" />
+                <line x1="166" y1="100" x2="178" y2="100" stroke="#c4ccd2" stroke-width="3" />
+                <line class="gauge-needle needle-load" x1="100" y1="100" x2="100" y2="26" />
+                <circle class="gauge-hub" cx="100" cy="100" r="8" />
+              </svg>
+              <span class="gauge-value">68%</span>
+              <span class="gauge-label">System Load</span>
+              <span class="gauge-note">of 210 MW capacity</span>
+            </div>
+
+            <div class="gauge-dial" role="img" aria-label="Reserve capacity: 22 percent, above the 15 percent board minimum">
+              <svg viewBox="0 0 200 114" aria-hidden="true">
+                <path class="gauge-track" d="M22,100 A78,78 0 0 1 178,100" />
+                <line x1="22" y1="100" x2="34" y2="100" stroke="#c4ccd2" stroke-width="3" />
+                <line x1="100" y1="22" x2="100" y2="34" stroke="#c4ccd2" stroke-width="3" />
+                <line x1="166" y1="100" x2="178" y2="100" stroke="#c4ccd2" stroke-width="3" />
+                <line class="gauge-needle needle-reserve" x1="100" y1="100" x2="100" y2="30" />
+                <circle class="gauge-hub" cx="100" cy="100" r="6" />
+              </svg>
+              <span class="gauge-value">22%</span>
+              <span class="gauge-label">Reserve Capacity</span>
+              <span class="gauge-note">board minimum: 15%</span>
+            </div>
+          </div>
+          <p class="instrument-foot">Figures are illustrative and shown for demonstration purposes only. Actual grid conditions are monitored around the clock from Riverside Station.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-tint" aria-labelledby="explain-heading">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <h2 id="explain-heading">What each dial means.</h2>
+        </div>
+
+        <ul class="leadership-list reveal">
+          <li class="leadership-item">
+            <div>
+              <span class="leadership-name">System Load</span>
+              <span class="leadership-title">Percent of capacity</span>
+            </div>
+            <p>How much of Riverside Station's 210 MW capacity the city is drawing right now. Load climbs on hot afternoons and cold mornings and falls overnight. Above 90%, the station starts calling on purchased backup power.</p>
+          </li>
+          <li class="leadership-item">
+            <div>
+              <span class="leadership-name">Grid Frequency</span>
+              <span class="leadership-title">Hertz, target 60.00</span>
+            </div>
+            <p>Generation and demand have to stay in balance to hold 60 cycles a second. A needle that drifts off center means generation and demand have fallen out of step, and operators adjust output to correct it.</p>
+          </li>
+          <li class="leadership-item">
+            <div>
+              <span class="leadership-name">Reserve Capacity</span>
+              <span class="leadership-title">Percent held back</span>
+            </div>
+            <p>Generating capacity kept in reserve in case a unit trips offline unexpectedly. The Board of Public Utilities requires at least 15% held back at all times.</p>
+          </li>
+        </ul>
+        <a class="section-link" href="../about/index.html#mix">See where this year's generation comes from</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-brand-top">
+            <svg class="brand-mark" viewBox="0 0 24 24" aria-hidden="true">
+              <rect width="24" height="24" rx="4" fill="#c1662f" />
+              <path d="M13 2 4 14h6l-1 8 9-12h-6l1-8z" fill="#f4f5f2" />
+            </svg>
+            <span class="brand-name brand-name-invert">City Power Station</span>
+          </div>
+          <p>Adversary City's municipal electric utility: one generating station, six substations, 48,000 meters served.</p>
+          <p class="disclaimer">City Power Station and Adversary City are fictional. This site is part of the Adversary Wars simulated training scenario and is not affiliated with, and does not depict, any real electric utility, generating station, or place.</p>
+        </div>
+
+        <div>
+          <h3>Service</h3>
+          <ul>
+            <li><a href="../outages/index.html">Outages &amp; Safety</a></li>
+            <li><a href="../rates/index.html">Rates</a></li>
+            <li><a href="../programs/index.html">Programs</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Utility Info</h3>
+          <ul>
+            <li><a href="../about/index.html">About &amp; Leadership</a></li>
+            <li><a href="index.html">Grid Status</a></li>
+            <li><a href="../notices/index.html">Notices</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Contact</h3>
+          <ul>
+            <li><a href="../index.html#contact">Offices &amp; Hours</a></li>
+            <li><a href="../outages/index.html#report">Report an Outage</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span id="year"></span> City Power Station, Adversary City (fictional).</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js" defer></script>
+</body>
+</html>

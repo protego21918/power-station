@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<!--
+  Adversary Wars simulation project, set in the fictional city of Adversary City.
+  City Power Station is a fictional facility in the fictional city of Adversary City.
+  This site was built for a simulated training/CTF scenario and is not intended
+  to represent, impersonate, or harm any real electric utility, organization, or place.
+  No real personnel data, phone numbers, or addresses are used anywhere in this project.
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rates · City Power Station</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="disclaimer" content="City Power Station and Adversary City are fictional, built for the Adversary Wars simulated training scenario. Not affiliated with, and does not depict, any real electric utility, generating station, or place." />
+  <meta name="description" content="Residential and commercial electric rates, and the optional Time-of-Advantage plan, for City Power Station customers." />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none';" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='4' fill='%23c1662f'/%3E%3Cpath d='M13 2 4 14h6l-1 8 9-12h-6l1-8z' fill='%23f4f5f2'/%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="../index.html">
+        <svg class="brand-mark" viewBox="0 0 24 24" aria-hidden="true">
+          <rect width="24" height="24" rx="4" fill="#c1662f" />
+          <path d="M13 2 4 14h6l-1 8 9-12h-6l1-8z" fill="#f4f5f2" />
+        </svg>
+        <span class="brand-text">
+          <span class="brand-name">City Power Station</span>
+          <span class="brand-sub">Adversary City Municipal Utility · Est. 1938</span>
+        </span>
+      </a>
+
+      <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18" /></svg>
+        <span class="visually-hidden">Menu</span>
+      </button>
+
+      <nav class="primary-nav" id="primary-nav" aria-label="Primary">
+        <ul>
+          <li><a href="../about/index.html">About</a></li>
+          <li><a href="../grid-status/index.html">Grid Status</a></li>
+          <li><a href="../outages/index.html">Outages</a></li>
+          <li><a href="index.html" aria-current="page">Rates</a></li>
+          <li><a href="../programs/index.html">Programs</a></li>
+          <li><a href="../notices/index.html">Notices</a></li>
+        </ul>
+        <a class="btn btn-primary" href="../outages/index.html#report">Report an Outage</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-header">
+      <div class="wrap">
+        <h1>Rates and rate plans.</h1>
+        <p class="lede">Set by the Board of Public Utilities at public meetings, not a private board. Residential rates rise in tiers as usage climbs; commercial accounts choose a flat or time-of-use structure.</p>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="residential-heading">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <h2 id="residential-heading">Residential rates.</h2>
+          <p>Usage above the first block costs more per kilowatt-hour, which rewards conservation.</p>
+        </div>
+
+        <div class="table-scroll reveal">
+          <table class="rate-table">
+            <thead>
+              <tr>
+                <th>Usage Tier</th>
+                <th class="num">Price per kWh</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Tier 1: first 500 kWh</td><td class="num">$0.1024</td></tr>
+              <tr><td>Tier 2: 501 to 1,000 kWh</td><td class="num">$0.1247</td></tr>
+              <tr><td>Tier 3: 1,001 kWh and up</td><td class="num">$0.1489</td></tr>
+              <tr><td>Fixed customer charge</td><td class="num">$9.50 / month</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="table-note">Current as of the July 2026 rate schedule. See Notices for the open Tier 3 rate case.</p>
+      </div>
+    </section>
+
+    <section class="section section-tint" aria-labelledby="commercial-heading">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <h2 id="commercial-heading">Commercial rates.</h2>
+          <p>Small commercial accounts pay a flat per-kilowatt-hour rate. Accounts with demand over 20 kW are billed on a separate demand-charge schedule available from Customer Service.</p>
+        </div>
+
+        <div class="table-scroll reveal">
+          <table class="rate-table">
+            <thead>
+              <tr>
+                <th>Account Type</th>
+                <th class="num">Price per kWh</th>
+                <th class="num">Customer Charge</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Small commercial (under 20 kW demand)</td><td class="num">$0.1198</td><td class="num">$18.00 / month</td></tr>
+              <tr><td>Demand accounts (20 kW and up)</td><td class="num">Call for schedule</td><td class="num">Varies</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="plans-heading">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <h2 id="plans-heading">Optional rate plans.</h2>
+          <p>Any residential or small commercial account can switch, free of charge, once per calendar year.</p>
+        </div>
+
+        <div class="plan-cards reveal">
+          <div class="plan-card">
+            <span class="plan-card-kind">Time-of-Advantage</span>
+            <h3>On-Peak / Off-Peak</h3>
+            <p>On-peak: weekdays 2 PM to 7 PM, $0.1690/kWh. Off-peak: all other hours, $0.0812/kWh. Best for accounts that can shift laundry, charging, and appliance use off-peak.</p>
+          </div>
+          <div class="plan-card">
+            <span class="plan-card-kind">Billing</span>
+            <h3>Equal Payment Plan</h3>
+            <p>Averages your annual usage into one flat monthly amount, adjusted every 12 months. No seasonal spikes on a single bill.</p>
+          </div>
+          <div class="plan-card">
+            <span class="plan-card-kind">Renewable</span>
+            <h3>Green Power Choice</h3>
+            <p>Add $4/month to match 100% of your usage with renewable energy credits from the Riverside Solar Array.</p>
+          </div>
+        </div>
+        <a class="section-link" href="../programs/index.html">See rebates and assistance programs</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-brand-top">
+            <svg class="brand-mark" viewBox="0 0 24 24" aria-hidden="true">
+              <rect width="24" height="24" rx="4" fill="#c1662f" />
+              <path d="M13 2 4 14h6l-1 8 9-12h-6l1-8z" fill="#f4f5f2" />
+            </svg>
+            <span class="brand-name brand-name-invert">City Power Station</span>
+          </div>
+          <p>Adversary City's municipal electric utility: one generating station, six substations, 48,000 meters served.</p>
+          <p class="disclaimer">City Power Station and Adversary City are fictional. This site is part of the Adversary Wars simulated training scenario and is not affiliated with, and does not depict, any real electric utility, generating station, or place.</p>
+        </div>
+
+        <div>
+          <h3>Service</h3>
+          <ul>
+            <li><a href="../outages/index.html">Outages &amp; Safety</a></li>
+            <li><a href="index.html">Rates</a></li>
+            <li><a href="../programs/index.html">Programs</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Utility Info</h3>
+          <ul>
+            <li><a href="../about/index.html">About &amp; Leadership</a></li>
+            <li><a href="../grid-status/index.html">Grid Status</a></li>
+            <li><a href="../notices/index.html">Notices</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Contact</h3>
+          <ul>
+            <li><a href="../index.html#contact">Offices &amp; Hours</a></li>
+            <li><a href="../outages/index.html#report">Report an Outage</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span id="year"></span> City Power Station, Adversary City (fictional).</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js" defer></script>
+</body>
+</html>
